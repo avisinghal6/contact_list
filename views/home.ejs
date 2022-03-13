@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title><% title %></title>
+        <link rel="stylesheet" href="/css/home.css">  <!--this path is relative to the static files path specified in index.js -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    </head>
+    <body>
+        <h1 id="app-header"> <i class="fas fa-address-card"></i>Contacts List</h1>
+
+        <div id="contacts-container">
+            <ul id="contact-list">
+                <% for (let i of contact_list) { %>
+                    <div id="contact">
+                        <li id="contact-data">
+                            <span><h2><%= i.name  %></h2></span>
+                            <span><h2><%= i.phone  %></h2></span>
+                        </li>
+                    </div>
+
+                    <div id="delete-contact">
+                        <a href="/delete_contact/<%= i.id%> "> Delete</a>
+                    </div>
+
+                <% } %>
+            </ul>
+        </div>
+
+        <form id="input-form" action="/create-contact" method="POST">
+            <input type="text" name="name" placeholder="enter name" required>
+            <input type="number" name="phone" placeholder="enter phone number" required>
+
+            <button type="submit" > Add contact </button>
+        </form>
+    </body>
+</html> 

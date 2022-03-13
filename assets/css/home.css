@@ -1,0 +1,65 @@
+body{
+    background-image: linear-gradient(blue,white);
+    font-family: sans-serif;
+}
+
+#app-header{
+    text-align: center;
+    margin-top:10vh;
+}
+
+#contacts-container{
+    margin-left:25vw;
+    width:50vw;
+   
+}
+
+#contact-list li{
+    width:100%;
+}
+#contact-list{
+    width:inherit;
+    list-style-type: none;
+    padding-inline-start: 0;
+    display:flex;
+    flex-wrap:wrap;
+}
+
+#contact{
+    display: flex;
+    width:80%;
+    height:10vh;
+    margin-bottom: 2vh;
+    background-color:rgb(204, 127, 255);
+}
+
+#contact-data{
+    display:flex;
+    justify-content: space-between;
+    color:white;
+    padding-left:1vw;
+    padding-right:1vw;
+}
+
+#delete-contact{
+    width:20%;
+    background-color:black;
+    color:white;
+    margin-bottom: 2vh;
+    height:10vh;
+    text-align: center;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#delete-contact a{
+    text-decoration: none;
+    color:white;
+    
+}
+
+#input-form{
+    margin: left 25vw;
+}
+
